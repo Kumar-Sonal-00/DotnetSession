@@ -1,0 +1,6 @@
+//read the token from localStorage saved during login
+    const token="eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImV4cCI6MTcyNzkzOTEyNSwiaXNzIjoid3d3LnN0YWNrcm91dGUuY29tIiwiYXVkIjoic3RhY2tyb3V0ZS5jb20ifQ.PZouBagy-kqULGCp4x_TBF2jZ8Hcnvaz3Yh7NnZYQFA";
+    const headers = { 'Authorization': `Bearer ${token}` }
+    return this.http.get<Contact[]>(
+    "http://localhost:5123/apigateway/EmployeeService/GetEmployees",
+    {headers:headers}); 

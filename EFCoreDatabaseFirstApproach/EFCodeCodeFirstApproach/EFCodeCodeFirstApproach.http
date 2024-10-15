@@ -1,0 +1,6 @@
+@EFCodeCodeFirstApproach_HostAddress = http://localhost:5262
+
+GET {{EFCodeCodeFirstApproach_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,6 @@
+@ApiGateWayConsul_HostAddress = http://localhost:5023
+
+GET {{ApiGateWayConsul_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

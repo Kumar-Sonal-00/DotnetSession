@@ -1,0 +1,13 @@
+services:
+  customerapi:
+    image: ${DOCKER_REGISTRY-}customerapi
+    build:
+      context: .
+      dockerfile: CustomerApi/Dockerfile
+
+  sampledockerapi:
+    image: ${DOCKER_REGISTRY-}sampledockerapi
+    build:
+      context: .
+      dockerfile: SampleDockerAPI/Dockerfile
+

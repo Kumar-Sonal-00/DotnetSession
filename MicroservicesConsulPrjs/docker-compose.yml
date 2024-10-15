@@ -1,0 +1,13 @@
+services:
+  apigatewayconsul:
+    image: ${DOCKER_REGISTRY-}apigatewayconsul
+    build:
+      context: .
+      dockerfile: ApiGateWayConsul/Dockerfile
+
+  weatherapimicroservice:
+    image: ${DOCKER_REGISTRY-}weatherapimicroservice
+    build:
+      context: .
+      dockerfile: WeatherAPIMicroservice/Dockerfile
+

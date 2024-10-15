@@ -1,0 +1,36 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Employees/GetEmps",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5170
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/EmployeeService/GetEmployees",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtBearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE","OPTIONS" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Departments/GetDepts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5042
+        }
+      ],
+      "UpstreamPathTemplate": "/apigateway/DepartmentService/GetDepartments",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "JwtBearer",
+        "AllowedScopes": []
+      },
+      "UpstreamHttpMethod": [ "GET", "PUT", "POST", "DELETE" ]
+    }
+  ]
+}
